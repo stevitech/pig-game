@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+.player_container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(227, 158, 158);
+    position: relative;
+}
+.player_wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    height: 75%;
+    width: 50%;
+    margin: 8rem auto;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+    z-index: 1;
+}
+.player_wrapper:hover {
+    -webkit-box-shadow: 5px 0px 25px -5px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 0px 25px -5px rgba(66, 68, 90, 1);
+    box-shadow: 5px 0px 25px -5px rgba(66, 68, 90, 1);
+}
+.p1_card,
+.p2_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+    height: 100%;
+}
+.p_card_title {
+    font-size: 3rem;
+    color: rgb(70, 59, 59);
+    margin-bottom: 5rem;
+}
+.p_card_score {
+    font-size: 5.5rem;
+    color: rgb(235, 77, 77);
+
+    /* border-radius: 0.8rem;
+    -webkit-box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.635);
+    -moz-box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.637);
+    box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.58); */
+}
+.active {
+    background-color: rgba(0, 0, 0, 0.068);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.current_score {
+    background-color: rgb(235, 77, 77);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 2rem auto;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+}
+.current_score_txt {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.current_score_nr {
+    font-size: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game_b_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto 0;
+    z-index: 2;
+    width: 20rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.roll {
+    font-size: 3rem;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    /* color: rgb(235, 77, 77); */
 }
-
-.App-link {
-  color: #61dafb;
+.roll:hover {
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    padding: 1rem;
+    border: none;
+    color: #ffffff;
+    background-color: rgba(235, 77, 77, 0.893);
+    border-radius: 14px;
+}
+button:hover {
+    -webkit-box-shadow: 0px 6px 21px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 6px 21px -15px rgba(66, 68, 90, 1);
+    box-shadow: 0px 6px 21px -15px rgba(66, 68, 90, 1);
+}
+.hold {
+    margin-bottom: 2rem;
+}
+.img_container {
+    border-radius: 5px;
+    margin: 3rem auto;
+    border: 1px solid rgba(235, 77, 77, 0.893);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 0.6rem;
+    -webkit-box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.635);
+    -moz-box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.637);
+    box-shadow: inset 1px -4px 33px -10px rgba(66, 68, 90, 0.58);
+}
+.dice_img {
+    height: 5rem;
+    width: 5rem;
+}
+.author {
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(235, 77, 77, 0.324);
+    margin-bottom: 1rem;
+}
+.score-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.select_score_txt {
+    margin-bottom: 0.8rem;
 }
